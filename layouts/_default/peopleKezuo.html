@@ -1,0 +1,168 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+<section class="page-wrapper">
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-4 sticky-top">
+        <h2>{{ .Title }}</h2>
+        {{ with .Params.subtitle }}{{ . | $.Page.RenderString (dict "display" "block") }}{{ end }}
+        <p>{{ i18n "last_update" }}: {{ time.Format "2006-01-02" .Lastmod }}</p>
+        <h3>{{ i18n "faq_toc_title" }}</h3>
+        {{ .TableOfContents }}
+      </div> -->
+      <div class="col-md-12">
+        <table class="people-table" width="100%">
+          <tbody>
+          <tr>
+          <td width="5%">序号</td>
+          <td width="12%">姓名</td>
+          <td width="5%">性别</td>
+          <td width="5%">年龄</td>
+          <td width="14%">从事专业</td>
+          <td width="10%">技术职务</td>
+          <td width="11%">来自国家</td>
+          <td width="15%">工作单位</td>
+          <td width="11%">在野外站工作期限</td>
+          </tr>
+          <tr>
+          <td width="29">1</td>
+          <td width="112">赵红芳</td>
+          <td width="29">女</td>
+          <td width="29">30</td>
+          <td width="53">生态学</td>
+          <td width="65">研究员</td>
+          <td width="41">中国</td>
+          <td width="113">华东师范大学</td>
+          <td width="90">2018.4-2019.6</td>
+          </tr>
+          <tr>
+          <td width="29">2</td>
+          <td width="112">Okke&nbsp; Ottenlinger</td>
+          <td width="29">男</td>
+          <td width="29">33</td>
+          <td width="53">树木学</td>
+          <td width="65">硕士研究生</td>
+          <td width="41">德国</td>
+          <td width="113">汉堡大学</td>
+          <td width="90">2011.9-2013.3</td>
+          </tr>
+          <tr>
+          <td width="29">3</td>
+          <td width="112">Rao Meenakshi</td>
+          <td width="29">女</td>
+          <td width="29">59</td>
+          <td width="53">环境科学</td>
+          <td width="65">访问学者</td>
+          <td width="41">美国</td>
+          <td width="113">波特兰州立大学</td>
+          <td width="90">2014.6-2014.10</td>
+          </tr>
+          <tr>
+          <td width="29">4</td>
+          <td width="112">Zhuomin Zhang</td>
+          <td width="29">男</td>
+          <td width="29">22</td>
+          <td width="53">林学</td>
+          <td width="65">交流生</td>
+          <td width="41">加拿大</td>
+          <td width="113">不列颠哥伦比亚大学</td>
+          <td width="90">2019.5-2019.8</td>
+          </tr>
+          <tr>
+          <td width="29">5</td>
+          <td width="112">Julien Rouault</td>
+          <td width="29">男</td>
+          <td width="29">32</td>
+          <td width="53">环境科学</td>
+          <td width="65">硕士研究生</td>
+          <td width="41">法国</td>
+          <td width="113">雷恩第一大学</td>
+          <td width="90">2010.3-2010.11</td>
+          </tr>
+          <tr>
+          <td width="29">6</td>
+          <td width="112">Becuwe Xavier</td>
+          <td width="29">男</td>
+          <td width="29">33</td>
+          <td width="53">林学</td>
+          <td width="65">硕士研究生</td>
+          <td width="41">英国</td>
+          <td width="113">克兰菲尔德大学</td>
+          <td width="90">2009.3-2009.8</td>
+          </tr>
+          <tr>
+          <td width="29">7</td>
+          <td width="112">Carol Yang</td>
+          <td width="29">女</td>
+          <td width="29">22</td>
+          <td width="53">生态学</td>
+          <td width="65">交流生</td>
+          <td width="41">加拿大</td>
+          <td width="113">卡尔加里大学</td>
+          <td width="90">2016.6-2016.8</td>
+          </tr>
+          <tr>
+          <td width="29">8</td>
+          <td width="112">Annie Yu</td>
+          <td width="29">女</td>
+          <td width="29">21</td>
+          <td width="53">生态学</td>
+          <td width="65">交流生</td>
+          <td width="41">美国</td>
+          <td width="113">康奈尔大学</td>
+          <td width="90">2016.6-2016.8</td>
+          </tr>
+          <tr>
+          <td width="29">9</td>
+          <td width="112">Mengdi Li</td>
+          <td width="29">女</td>
+          <td width="29">23</td>
+          <td width="53">地学</td>
+          <td width="65">交流生</td>
+          <td width="41">英国</td>
+          <td width="113">伦敦大学学院</td>
+          <td width="90">2016.6-2016.8</td>
+          </tr>
+          <tr>
+          <td width="29">10</td>
+          <td width="112">Zhuoyin Liu</td>
+          <td width="29">女</td>
+          <td width="29">23</td>
+          <td width="53">生态学</td>
+          <td width="65">交流生</td>
+          <td width="41">加拿大</td>
+          <td width="113">多伦多大学</td>
+          <td width="90">2016.6-2016.8</td>
+          </tr>
+          <tr>
+          <td width="29">11</td>
+          <td width="112">Adriana Alvarado</td>
+          <td width="29">女</td>
+          <td width="29">22</td>
+          <td width="53">环境工程</td>
+          <td width="65">交流生</td>
+          <td width="41">美国</td>
+          <td width="113">伍斯特理工学院</td>
+          <td width="90">2017.6-2017.8</td>
+          </tr>
+          <tr>
+          <td width="29">12</td>
+          <td width="112">Julia Walker</td>
+          <td width="29">女</td>
+          <td width="29">22</td>
+          <td width="53">生态学</td>
+          <td width="65">交流生</td>
+          <td width="41">加拿大</td>
+          <td width="113">美国康奈尔大学</td>
+          <td width="90">2017.6-2017.8</td>
+          </tr>
+          </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

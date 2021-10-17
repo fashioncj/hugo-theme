@@ -1,0 +1,480 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+<section class="page-wrapper">
+  <div class="container" style="width: 1200px;">
+    <div class="row">
+      <!-- <div class="col-md-4 sticky-top">
+        <h2>{{ .Title }}</h2>
+        {{ with .Params.subtitle }}{{ . | $.Page.RenderString (dict "display" "block") }}{{ end }}
+        <p>{{ i18n "last_update" }}: {{ time.Format "2006-01-02" .Lastmod }}</p>
+        <h3>{{ i18n "faq_toc_title" }}</h3>
+        {{ .TableOfContents }}
+      </div> -->
+      <div class="col-md-12">
+        <table class="people-table" width="100%">
+          <tbody>
+          <tr>
+          <td width="3%">序号</td>
+          <td width="10%">姓名</td>
+          <td width="3%">性别</td>
+          <td width="14%">邮件地址</td>
+          <td width="6%">学生类别</td>
+          <td width="8%">入学/进站日期</td>
+          <td width="8%">毕业/出站日期</td>
+          <td width="12%">专业</td>
+          <td width="12%">研究方向</td>
+          <td width="15%">论文题目</td>
+          <td width="9%">导师姓名</td>
+          </tr>
+          <tr>
+          <td>1</td>
+          <td>易扬</td>
+          <td>女</td>
+          <td>yiyang0307@sjtu.edu.cn</td>
+          <td>博士后</td>
+          <td>2017-09-15</td>
+          <td></td>
+          <td>生态学</td>
+          <td>土地利用</td>
+          <td></td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>2</td>
+          <td>张鲜鲜</td>
+          <td>女</td>
+          <td>xixizi01090@163.com</td>
+          <td>博士生</td>
+          <td>2011-09-01</td>
+          <td>2016-12-15</td>
+          <td width="223">生态学</td>
+          <td width="129">DNDC模型</td>
+          <td width="217">上海稻田CH4和N2O排放特点及其减排措施的研究</td>
+          <td>刘春江，殷杉</td>
+          </tr>
+          <tr>
+          <td>3</td>
+          <td width="164">杜宝明</td>
+          <td width="181">男</td>
+          <td width="217">bmdu@sjtu.edu.cn</td>
+          <td>博士生</td>
+          <td>2012-09-01</td>
+          <td width="217"></td>
+          <td width="223">生态学</td>
+          <td>生态学学计量学</td>
+          <td></td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>4</td>
+          <td width="164">姬华伟</td>
+          <td width="181">女</td>
+          <td width="217">huaweiji1001@126.com</td>
+          <td>博士生</td>
+          <td>2014-09-01</td>
+          <td width="217"></td>
+          <td width="223">生态学</td>
+          <td>生态学学计量学</td>
+          <td></td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>5</td>
+          <td width="164">郑吉</td>
+          <td width="181">男</td>
+          <td width="217">zhengjiji456@163.com</td>
+          <td>博士生</td>
+          <td>2015-09-01</td>
+          <td width="217"></td>
+          <td width="223">生态学</td>
+          <td>林分生长与模型模拟</td>
+          <td></td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>6</td>
+          <td width="164">Muhammad Umair</td>
+          <td width="181">男</td>
+          <td width="217">umair.bot@gmail.com</td>
+          <td>博士生</td>
+          <td>2015-09-01</td>
+          <td width="217"></td>
+          <td width="223">生态学</td>
+          <td>生态学学计量学</td>
+          <td></td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>7</td>
+          <td width="164">袁俊</td>
+          <td width="181">女</td>
+          <td width="217">1028793559@qq.com</td>
+          <td>博士生</td>
+          <td>2016-09-01</td>
+          <td width="217"></td>
+          <td width="223">生态学</td>
+          <td>生态化学计量学</td>
+          <td></td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>8</td>
+          <td width="164">章旭毅</td>
+          <td width="181">男</td>
+          <td width="217">948618598@qq.com</td>
+          <td>博士生</td>
+          <td>2014-09-01</td>
+          <td width="217"></td>
+          <td width="223">生态学</td>
+          <td>大气颗粒物</td>
+          <td></td>
+          <td>刘春江，殷杉</td>
+          </tr>
+          <tr>
+          <td>9</td>
+          <td>孙逍</td>
+          <td>女</td>
+          <td width="217">sunxiao1014@njau.edu.cn</td>
+          <td>博士生</td>
+          <td>2008-09-01</td>
+          <td>2013-11-01</td>
+          <td width="223">生态学</td>
+          <td>生态化学计量学</td>
+          <td></td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>10</td>
+          <td>王哲</td>
+          <td>男</td>
+          <td width="217">zhewang0815091@163.com</td>
+          <td>博士生</td>
+          <td>2008-09-01</td>
+          <td>2012-01-01</td>
+          <td width="223">生态学</td>
+          <td>生态化学计量学</td>
+          <td></td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>11</td>
+          <td>朱燕华</td>
+          <td>女</td>
+          <td>zhuyanhua2007@163.com</td>
+          <td>硕士生</td>
+          <td>2007-09-01</td>
+          <td>2010-03-01</td>
+          <td>生态学</td>
+          <td>生态化学计量学</td>
+          <td width="217">东亚地区栓皮栎叶片性状的变异格局及其对环境变化的影响</td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>12</td>
+          <td>陈东梅</td>
+          <td>女</td>
+          <td>dongmeijane@live.cn</td>
+          <td>硕士生</td>
+          <td>2008-09-01</td>
+          <td>2011-03-01</td>
+          <td>园林植物与观赏园艺</td>
+          <td>生态化学计量学</td>
+          <td width="217">东亚地区栓皮栎基于cpDNA序列变异的亲缘地理学研究</td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>13</td>
+          <td>吴丽丽</td>
+          <td>女</td>
+          <td>clio@sjtu.edu.cn</td>
+          <td>硕士生</td>
+          <td>2008-09-01</td>
+          <td>2011-03-01</td>
+          <td>园林植物与观赏园艺</td>
+          <td>生态化学计量学</td>
+          <td width="217">区域尺度上栓皮栎叶性状变异特点及其与环境因子的关系</td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>14</td>
+          <td>周旋</td>
+          <td>女</td>
+          <td width="217">xuan.zhou@helsinki.fi</td>
+          <td>硕士生</td>
+          <td>2012-09-01</td>
+          <td>2015-03-15</td>
+          <td width="223">生态学</td>
+          <td>生态化学计量学</td>
+          <td></td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>15</td>
+          <td>曹宏亮</td>
+          <td>男</td>
+          <td width="217">hongliangcao@foxmail.com</td>
+          <td>硕士生</td>
+          <td>2013-09-01</td>
+          <td>2016-03-15</td>
+          <td>植物保护</td>
+          <td>大气颗粒物</td>
+          <td width="217">基于UFORE模型的上海城市森林净化大气细颗粒物模型构建</td>
+          <td>刘春江，殷杉</td>
+          </tr>
+          <tr>
+          <td>16</td>
+          <td width="164">温家豪</td>
+          <td width="181">男</td>
+          <td width="217">474062286@qq.com</td>
+          <td>硕士生</td>
+          <td>2015-09-01</td>
+          <td width="217"></td>
+          <td width="223">风景园林</td>
+          <td>生态化学计量学</td>
+          <td></td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>17</td>
+          <td width="164">江畅</td>
+          <td width="181">男</td>
+          <td width="217">arues@foxmail.com</td>
+          <td>硕士生</td>
+          <td>2015-09-01</td>
+          <td width="217"></td>
+          <td width="223">风景园林</td>
+          <td>大气颗粒物</td>
+          <td></td>
+          <td>刘春江，殷杉</td>
+          </tr>
+          <tr>
+          <td>18</td>
+          <td>陈柯豪</td>
+          <td></td>
+          <td>328143531@qq.com</td>
+          <td>硕士生</td>
+          <td>2015-09-01</td>
+          <td width="217"></td>
+          <td width="223">风景园林</td>
+          <td>生态化学计量学</td>
+          <td></td>
+          <td>杜红梅，刘春江</td>
+          </tr>
+          <tr>
+          <td>19</td>
+          <td>陶慧敏</td>
+          <td>女</td>
+          <td width="217">1194259387@qq.com</td>
+          <td>硕士生</td>
+          <td>2016-09-01</td>
+          <td></td>
+          <td></td>
+          <td>生态化学计量学</td>
+          <td></td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>20</td>
+          <td>缪斯</td>
+          <td>女</td>
+          <td width="217">516272183@qq.com</td>
+          <td>硕士生</td>
+          <td>2016-09-01</td>
+          <td></td>
+          <td></td>
+          <td>大气负离子</td>
+          <td></td>
+          <td>刘春江，殷杉</td>
+          </tr>
+          <tr>
+          <td>21</td>
+          <td>熊峰</td>
+          <td>男</td>
+          <td></td>
+          <td>硕士生</td>
+          <td>2016-09-01</td>
+          <td></td>
+          <td width="223">风景园林</td>
+          <td>大气VOC</td>
+          <td width="217"></td>
+          <td>周丕生，殷杉</td>
+          </tr>
+          <tr>
+          <td>22</td>
+          <td width="164">黄天颖</td>
+          <td width="181">女</td>
+          <td width="217">457456078@qq.com</td>
+          <td>硕士生</td>
+          <td>2014-09-01</td>
+          <td>2017-03-15</td>
+          <td width="223">风景园林</td>
+          <td>城市森林生态系统</td>
+          <td width="217">氮素添加对城市森林凋落物早期分解过程的影响</td>
+          <td>康宏樟，韩玉洁</td>
+          </tr>
+          <tr>
+          <td>23</td>
+          <td width="164">宁沐蕾</td>
+          <td width="181">女</td>
+          <td width="217">756507641@qq.com</td>
+          <td>硕士生</td>
+          <td>2014-09-01</td>
+          <td>2017-03-15</td>
+          <td width="223">风景园林</td>
+          <td>城市森林生态系统</td>
+          <td width="217">崇明不同土地利用方式对土壤碳、氮及微生物群落结构的影响</td>
+          <td>康宏樟，韩玉洁</td>
+          </tr>
+          <tr>
+          <td>24</td>
+          <td width="164">高唤唤</td>
+          <td width="181">女</td>
+          <td width="217">ghh12333@sjtu.edu.cn</td>
+          <td>硕士生</td>
+          <td>2015-09-01</td>
+          <td></td>
+          <td width="223">风景园林</td>
+          <td>城市森林生态系统</td>
+          <td></td>
+          <td>康宏樟，邓清华</td>
+          </tr>
+          <tr>
+          <td>25</td>
+          <td>王姣娇</td>
+          <td width="181">女</td>
+          <td width="217">1521670518@qq.com</td>
+          <td>硕士生</td>
+          <td>2016-09-01</td>
+          <td></td>
+          <td width="223">风景园林</td>
+          <td>城市森林生态系统</td>
+          <td></td>
+          <td>康宏樟，邓清华</td>
+          </tr>
+          <tr>
+          <td>26</td>
+          <td>田璐</td>
+          <td>女</td>
+          <td width="217">LUsjtu@126.com</td>
+          <td>硕士生</td>
+          <td>2017-09-01</td>
+          <td></td>
+          <td width="223">风景园林</td>
+          <td>城市森林生态系统</td>
+          <td></td>
+          <td>康宏樟，殷杉</td>
+          </tr>
+          <tr>
+          <td>27</td>
+          <td>苗泉昕</td>
+          <td>女</td>
+          <td width="217">1057769283@qq.com</td>
+          <td>硕士生</td>
+          <td>2017-09-01</td>
+          <td></td>
+          <td width="223">风景园林</td>
+          <td>城市森林生态系统</td>
+          <td></td>
+          <td>康宏樟</td>
+          </tr>
+          <tr>
+          <td>28</td>
+          <td>尤佳</td>
+          <td>女</td>
+          <td width="217">gysbyj95419@qq.com</td>
+          <td>硕士生</td>
+          <td>2017-09-01</td>
+          <td></td>
+          <td width="223">风景园林</td>
+          <td>生态化学计量学</td>
+          <td></td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>29</td>
+          <td>胡昕利</td>
+          <td>女</td>
+          <td width="217">2764927853@qq.com</td>
+          <td>硕士生</td>
+          <td>2017-09-01</td>
+          <td></td>
+          <td width="223">风景园林</td>
+          <td>生态化学计量学</td>
+          <td></td>
+          <td>刘春江</td>
+          </tr>
+          <tr>
+          <td>30</td>
+          <td width="164">蒋在荻</td>
+          <td width="181">男</td>
+          <td width="217">jzd930909@126.com</td>
+          <td>硕士生</td>
+          <td>2015-09-01</td>
+          <td>2018-03-15</td>
+          <td width="223">植物保护</td>
+          <td>DNDC模型</td>
+          <td></td>
+          <td>申广荣，殷杉</td>
+          </tr>
+          <tr>
+          <td>31</td>
+          <td width="164">项巧巧</td>
+          <td width="181">女</td>
+          <td width="217">1522237166@qq.com</td>
+          <td>硕士生</td>
+          <td>2015-09-01</td>
+          <td>2018-03-15</td>
+          <td width="223">植物保护</td>
+          <td>植被高光谱特征</td>
+          <td width="217">基于高光谱的城市森林生物量监测研究</td>
+          <td>申广荣</td>
+          </tr>
+          <tr>
+          <td>32</td>
+          <td width="164">蒋在荻</td>
+          <td width="181">男</td>
+          <td width="217">jzd930303@sjtu.edu.cn</td>
+          <td>硕士生</td>
+          <td>2015-09-01</td>
+          <td>2018-03-15</td>
+          <td width="223">生态学</td>
+          <td>DNDC 模型</td>
+          <td width="217">网络版CHINA-DNDC模型的研发与应用</td>
+          <td>申广荣，殷杉</td>
+          </tr>
+          <tr>
+          <td>33</td>
+          <td width="164">吴裕</td>
+          <td width="181">男</td>
+          <td width="217">1973613624@qq.com</td>
+          <td>硕士生</td>
+          <td>2016-09-01</td>
+          <td></td>
+          <td width="223">生态学</td>
+          <td>土壤光谱</td>
+          <td></td>
+          <td>申广荣</td>
+          </tr>
+          <tr>
+          <td>34</td>
+          <td width="164">刘璐</td>
+          <td width="181">女</td>
+          <td width="217">lucialiu@sjtu.edu.cn</td>
+          <td>硕士生</td>
+          <td>2017-09-01</td>
+          <td></td>
+          <td width="223">生态学</td>
+          <td>森林生态效益评价</td>
+          <td></td>
+          <td>申广荣</td>
+          </tr>
+          </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

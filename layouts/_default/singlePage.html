@@ -5,14 +5,14 @@
 <section class="page-wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 sticky-top">
+      <!-- <div class="col-md-4 sticky-top">
         <h2>{{ .Title }}</h2>
         {{ with .Params.subtitle }}{{ . | $.Page.RenderString (dict "display" "block") }}{{ end }}
         <p>{{ i18n "last_update" }}: {{ time.Format "2006-01-02" .Lastmod }}</p>
         <h3>{{ i18n "faq_toc_title" }}</h3>
         {{ .TableOfContents }}
-      </div>
-      <div class="col-md-8">
+      </div> -->
+      <div class="col-md-12">
         {{ .Content }}
       </div>
     </div>

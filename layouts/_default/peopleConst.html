@@ -1,0 +1,481 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+<section class="page-wrapper">
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-4 sticky-top">
+        <h2>{{ .Title }}</h2>
+        {{ with .Params.subtitle }}{{ . | $.Page.RenderString (dict "display" "block") }}{{ end }}
+        <p>{{ i18n "last_update" }}: {{ time.Format "2006-01-02" .Lastmod }}</p>
+        <h3>{{ i18n "faq_toc_title" }}</h3>
+        {{ .TableOfContents }}
+      </div> -->
+      <div class="col-md-12">
+        <div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><p></p>
+          <table class="people-table" width="100%">
+          <tbody>
+          <tr style="height: 16.0pt;">
+          <td width="25%">姓名</td>
+          <td width="25%">职称</td>
+          <td width="25%">职务</td>
+          <td width="25%">研究方向</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2274" target="_blank" rel="noopener noreferrer">周培</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">土壤生态</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2264" target="_blank" rel="noopener noreferrer">刘春江</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">城市生态</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2366" target="_blank" rel="noopener noreferrer">殷杉</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">资源环境</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/4782" target="_blank" rel="noopener noreferrer">薛红卫</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">植物生理生态</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2351" target="_blank" rel="noopener noreferrer">刘志诚</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">森林病虫害</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">车生泉</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生态规划</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2270" target="_blank" rel="noopener noreferrer">陈功友</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">植物保护</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">陈捷</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">植物保护</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2267" target="_blank" rel="noopener noreferrer">曹林奎</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">面源污染</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2295" target="_blank" rel="noopener noreferrer">沈国清</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">研究员</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">环境化学</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2294" target="_blank" rel="noopener noreferrer">邱江平</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">研究员</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">水污染治理</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2273" target="_blank" rel="noopener noreferrer">刘荣厚</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">能源利用</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">顾海英</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">城市经济</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2346" target="_blank" rel="noopener noreferrer">康宏樟</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">研究员</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">森林生态学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">安渊</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">研究员</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">植物生态</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2350" target="_blank" rel="noopener noreferrer">李银生</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">土壤生态</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2254" target="_blank" rel="noopener noreferrer">王兆龙</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">城市草业</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">申晓辉</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">园林树木学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2253" target="_blank" rel="noopener noreferrer">王世平</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">设施园艺</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2261" target="_blank" rel="noopener noreferrer">徐建雄</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">分子营养</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2256" target="_blank" rel="noopener noreferrer">张才喜</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">园艺学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">方涛</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">对地观测</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/4605" target="_blank" rel="noopener noreferrer">惠楠</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">城市环境</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2318" target="_blank" rel="noopener noreferrer">申广荣</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">3S<span class="font5">技术</span></td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/4372" target="_blank" rel="noopener noreferrer">王旭</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">遗传学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/3652" target="_blank" rel="noopener noreferrer">尹若贺</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">植物生理</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/4920" target="_blank" rel="noopener noreferrer">高泓博</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">植物学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/3607" target="_blank" rel="noopener noreferrer">朱勃</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">微生物学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2319" target="_blank" rel="noopener noreferrer">支月娥</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">微生物学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2368" target="_blank" rel="noopener noreferrer">李雅乾</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">微生物学</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2314" target="_blank" rel="noopener noreferrer">蔡均猛</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生物质能工程</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2320" target="_blank" rel="noopener noreferrer">邹丽芳</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">分子植物病理学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2370" target="_blank" rel="noopener noreferrer">赵琦</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生态学</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/4968" target="_blank" rel="noopener noreferrer">张丹</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副研究员</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">环境微生物</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/2349" target="_blank" rel="noopener noreferrer">李旭东</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">水生态学</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">刘群录</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">树木生理学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">张荻</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副研究员</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">代谢组学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">金伟民</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">副教授</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">气象学</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">谢强</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">高级实验师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">环境科学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">李彦邦</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">讲师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">园艺学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/5614" target="_blank" rel="noopener noreferrer">叶文秀</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">讲师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">农学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">张宇泉</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">讲师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">环境安全</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">戴咏梅</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">研究员</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">植被生态学</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">杨储丰</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">高级农艺师</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">果树学</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">潘士华</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">教授级工程师</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生态学</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">韩玉洁</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">高级工程师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">森林生态学</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">马晓平</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">高级实验师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生态学</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">葛海燕</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">高级实验师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生态学</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">方心葵</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">高级实验师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生态学</td>
+          </tr>
+          <tr style="height: 31.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">蒋磷蕾</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">高级实验师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生态学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">刘艳</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">实验师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生态学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">孙文</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">工程师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生态学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">孙宁骁</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">实验师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生态学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">杨夕佳</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">实验师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生态学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">朱鹏华</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">实验助理</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生态学</td>
+          </tr>
+          <tr style="height: 16.0pt;">
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">
+          <div class="yuan_div"><a href="http://www.agri.sjtu.edu.cn/Data/View/zzzz" target="_blank" rel="noopener noreferrer">詹学佳</a></div>
+          </td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">实验师</td>
+          <td class="xl64" style="border-left: none; width: 53pt;" width="71">/</td>
+          <td class="xl65" style="border-left: none; width: 53pt;" width="71">生态学</td>
+          </tr>
+          </tbody>
+          </table>
+          <p></p></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

@@ -317,7 +317,7 @@ input[type="tel"] {
   }
 
   &::before{
-    background-color: transparent !important; 
+    background-color: rgba(0,0,0,0.30) !important; 
   }
 }
 
@@ -674,4 +674,36 @@ span.cloaked-e-mail:before {
       display: table-cell;
       float: none;
   }
+}
+
+.col-md-12 table tbody td, .col-md-12 table tbody th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.col-md-12 table tr:nth-child(even){background-color: #f2f2f2;}
+
+.col-md-12 table tr:hover {background-color: #ddd;}
+
+.col-md-12 table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+table.people-table  tr td{ border-bottom:#dedede 1px solid;}
+table.people-table  td{
+	padding:0px 5px;
+	height: 35px;
+	font-size: 12px;
+	color: #737373;
+    line-height: 22px;
+    font-family: "微软雅黑";
+}
+.yuan_div a{  
+	text-decoration:underline;
+	display:block; 
+	text-align:left;
 }
