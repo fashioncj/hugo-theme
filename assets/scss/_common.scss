@@ -315,8 +315,31 @@ input[type="tel"] {
       color: $white;
     }
   }
+
+  &::before{
+    background-color: transparent !important; 
+  }
 }
 
+.image-hover-animate {
+  width: 370px !important; 
+  height: 326px !important;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.image-box-animate {
+  display: block;
+  overflow: hidden;
+}
+
+.image-hover-click {
+  pointer-events:none;
+}
 
 .heading {
   padding-bottom: 60px;

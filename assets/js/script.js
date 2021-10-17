@@ -42,6 +42,11 @@ $(document).ready(function () {
     });
   }
 
+  let imageBox = $('.image-hover-animate')
+  imageBox.click(()=>{
+    window.location.href = imageBox.data("link")
+  })
+
   $('.portfolio-single-slider').slick({
     infinite: true,
     arrows: false,
