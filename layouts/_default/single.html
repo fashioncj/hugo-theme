@@ -24,7 +24,7 @@
               </li>
             </ul>
           </div>
-          <div class="post-thumb">
+          <div class="post-thumb" style="display: none;"> 
             {{ with .Params.image -}}
             <img class="img-responsive" src="{{ . | relURL }}" alt="{{ $.Title }}">
             {{- end }}
