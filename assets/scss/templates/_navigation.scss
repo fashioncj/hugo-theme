@@ -1,6 +1,6 @@
 .navigation {
   background: $white;
-  padding: 20px 0;
+  padding: 0;
 
   .navbar {
     margin-bottom: 0px;
@@ -17,6 +17,14 @@
 
     .navbar-nav {
       padding-top: 10px;
+
+      .jem-link, .jem-nav-li {
+        line-height: 70px;
+      } 
+
+      .jem-li-language {
+        line-height: 90px;
+      }
 
       a {
         color: #7b7b7b;

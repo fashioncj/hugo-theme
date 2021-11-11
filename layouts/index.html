@@ -61,7 +61,7 @@
           <div class="post-media post-thumb">
             {{ if isset .Params "image" -}}
             <a href="{{ .RelPermalink }}">
-              <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}{{.Type}}">
+              <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}{{.Type}}" style="height: 300px;">
             </a>
             {{- end }}
           </div>
@@ -94,7 +94,7 @@
           <div class="post-media post-thumb">
             {{ if isset .Params "image" -}}
             <a href="{{ .RelPermalink }}">
-              <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}{{.Type}}">
+              <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}{{.Type}}" style="height: 300px;">
             </a>
             {{- end }}
           </div>
@@ -127,10 +127,10 @@
 <!-- portfolio -->
 {{ with .Params.portfolio }}
 {{ if .enable }}
-<section class="feature bg-2" style="background-image: url('{{ .bg_image | relURL }}')">
+<section class="feature bg-2" style="background-image: url('{{ .bg_image | relURL }}');background-size: 100% auto;">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-6">
+      <div class="col-md-6 col-md-offset-6" style="color: black;">
         {{ with .title }}<h2 class="section-subtitle">{{ . | markdownify }}</h2>{{ end }}
         {{ with .content }}{{ . | $.Page.RenderString (dict "display" "block") }}{{ end }}
         {{ with .button }}
@@ -170,11 +170,11 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 jem-height">
         <div class="block">
           <ul class="counter-box clearfix">
             {{ range .funfact_item }}
-            <li class="counter-item">
+            <li class="counter-item jem-margin">
               <i class="{{ .icon }}"></i>
               <h4 class="count" data-count="{{ .count }}">0</h4>
               <span>{{ .name | markdownify }}</span>
@@ -188,7 +188,8 @@
           <div class="testimonial-slider owl-carousel">
             {{ range .testimonial_slider }}
             <div>
-              <i class="fas fa-quote-left"></i>
+              <!-- <i class="fas fa-quote-left"></i> -->
+              <h2>历史沿革</h2>
               {{ with .content }}{{ . | $.Page.RenderString (dict "display" "block") }}{{ end }}
               <div class="user">
                 <img src="{{ .image | relURL }}" alt="client">

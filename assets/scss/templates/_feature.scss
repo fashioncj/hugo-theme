@@ -18,10 +18,12 @@
     margin: 0px;
     padding-top: 30px;
     padding-bottom: 30px;
+    font-weight: 500;
   }
 
   p {
-    color: darken( $light, 41.37);
+    // color: darken( $light, 41.37);
+    color: black;
     margin-bottom: 20px;
   }
 
