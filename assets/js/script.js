@@ -43,8 +43,12 @@ $(document).ready(function () {
   }
 
   let imageBox = $('.image-hover-animate')
-  imageBox.click(()=>{
-    window.location.href = imageBox.data("link")
+  // imageBox.click(()=>{
+  //   window.location.href = imageBox.data("link")
+  // })
+
+  imageBox.click((e) => {
+    window.location.href = e.target.dataset['link']
   })
 
   $('.portfolio-single-slider').slick({
